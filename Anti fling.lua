@@ -14,11 +14,6 @@ AntiFlingFunction = RunService.Stepped:Connect(function()
                             v.Velocity = Vector3.new(0,0,0)
                             v.RotVelocity = Vector3.new(0,0,0)
                             v.CustomPhysicalProperties = PhysicalProperties.new(0,0,0,0,0)
-                        elseif v:IsA("Accessory") then
-                            v.Handle.CanCollide = false
-                            v.Handle.Velocity = Vector3.new(0,0,0)
-                            v.RotVelocity = Vector3.new(0,0,0)
-                            v.CustomPhysicalProperties = PhysicalProperties.new(0,0,0,0,0)
                         end
                     end)
                 end
