@@ -11,9 +11,8 @@ AntiFlingFunction = RunService.Stepped:Connect(function()
                     pcall(function()
                         if v:IsA("BasePart") then
                             v.CanCollide = false
-                            v.Velocity = Vector3.new(0,0,0)
-                            v.RotVelocity = Vector3.new(0,0,0)
-                            v.CustomPhysicalProperties = PhysicalProperties.new(0,0,0,0,0)
+                            v.AssemblyAngularVelocity = Vector3.new(0, 0, 0)
+					        v.AssemblyLinearVelocity = Vector3.new(0, 0, 0)
                         end
                     end)
                 end
