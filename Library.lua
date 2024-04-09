@@ -200,8 +200,9 @@ local mystery = utility.create("ScreenGui", {})
 mystery.Name = "MysteryHub"
 mystery.Parent = coreGui
 
-inputService.InputBegan:Connect(function(input)
-    if input.KeyCode == library.keybind then
+local Mouse = game:GetService("Players").LocalPlayer:GetMouse()
+Mouse.KeyDown:Connect(function(Key)
+    if Key == "p" then
         library.toggled = not library.toggled
         mystery.Enabled = library.toggled
     end
